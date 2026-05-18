@@ -6,6 +6,7 @@
   <title>Sai Anirudh Godavarthi | Portfolio</title>
 
   <style>
+
     *{
       margin:0;
       padding:0;
@@ -14,30 +15,31 @@
 
     body{
       font-family: "Segoe UI", sans-serif;
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-      color: white;
+      background: #f4f7fb;
+      color: #1e293b;
       min-height: 100vh;
       display: flex;
     }
 
     /* SIDEBAR */
+
     .sidebar{
       width: 250px;
-      background: rgba(255,255,255,0.05);
-      backdrop-filter: blur(10px);
+      background: white;
       padding-top: 30px;
       position: fixed;
       height: 100%;
       left: 0;
       top: 0;
-      border-right: 1px solid rgba(255,255,255,0.1);
+      border-right: 1px solid #dbe4ee;
+      box-shadow: 2px 0 10px rgba(0,0,0,0.05);
     }
 
     .sidebar h2{
       text-align: center;
       margin-bottom: 30px;
-      color: #38bdf8;
-      font-size: 24px;
+      color: #2563eb;
+      font-size: 26px;
     }
 
     .sidebar button{
@@ -45,64 +47,70 @@
       padding: 15px 25px;
       background: transparent;
       border: none;
-      color: white;
+      color: #334155;
       text-align: left;
       font-size: 16px;
       cursor: pointer;
       transition: 0.3s;
+      font-weight: 500;
     }
 
     .sidebar button:hover{
-      background: #38bdf8;
-      color: #0f172a;
+      background: #2563eb;
+      color: white;
     }
 
     /* MAIN CONTENT */
+
     .main{
       margin-left: 250px;
       width: calc(100% - 250px);
       padding: 40px;
     }
 
+    /* HERO SECTION */
+
     .hero{
-      background: rgba(255,255,255,0.08);
-      border-radius: 20px;
-      padding: 40px;
+      background: white;
+      border-radius: 25px;
+      padding: 50px;
       text-align: center;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
       margin-bottom: 30px;
     }
 
     .hero img{
-      width: 170px;
-      height: 170px;
+      width: 220px;
+      height: 220px;
       border-radius: 50%;
       object-fit: cover;
-      border: 5px solid #38bdf8;
-      margin-bottom: 20px;
+      border: 6px solid #2563eb;
+      margin-bottom: 25px;
+      box-shadow: 0 10px 25px rgba(37,99,235,0.2);
     }
 
     .hero h1{
       font-size: 42px;
+      color: #2563eb;
       margin-bottom: 10px;
-      color: #38bdf8;
     }
 
     .hero p{
       font-size: 18px;
-      color: #d1d5db;
+      color: #475569;
+      line-height: 1.7;
       margin-top: 10px;
-      line-height: 1.6;
     }
 
     /* BUTTONS */
+
     .hero-buttons{
-      margin-top: 25px;
+      margin-top: 30px;
     }
 
     .hero-buttons a{
       display: inline-block;
-      padding: 12px 22px;
+      padding: 13px 24px;
       margin: 10px;
       border-radius: 10px;
       text-decoration: none;
@@ -111,29 +119,28 @@
     }
 
     .email-btn{
-      background: #38bdf8;
-      color: #0f172a;
+      background: #2563eb;
+      color: white;
     }
 
     .github-btn{
-      border: 2px solid #38bdf8;
-      color: #38bdf8;
+      border: 2px solid #2563eb;
+      color: #2563eb;
     }
 
-    .email-btn:hover,
-    .github-btn:hover{
+    .hero-buttons a:hover{
       transform: translateY(-3px);
-      opacity: 0.9;
     }
 
-    /* CARDS */
+    /* CONTENT CARDS */
+
     .card{
       display: none;
-      background: rgba(255,255,255,0.08);
-      padding: 30px;
-      border-radius: 18px;
+      background: white;
+      padding: 35px;
+      border-radius: 20px;
       margin-bottom: 25px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
     }
 
     .card.active{
@@ -141,27 +148,36 @@
     }
 
     .card h2{
-      color: #38bdf8;
+      color: #2563eb;
       margin-bottom: 20px;
+      font-size: 28px;
+    }
+
+    .card p,
+    .card li{
+      color: #475569;
+      font-size: 17px;
+      line-height: 1.8;
     }
 
     .card ul{
       padding-left: 20px;
     }
 
-    .card li{
-      margin-bottom: 12px;
-      line-height: 1.6;
-    }
-
     footer{
       text-align: center;
-      margin-top: 30px;
-      color: #94a3b8;
+      margin-top: 35px;
+      color: #64748b;
+      font-size: 15px;
     }
 
-    /* MOBILE */
+    /* MOBILE RESPONSIVE */
+
     @media(max-width:768px){
+
+      body{
+        flex-direction: column;
+      }
 
       .sidebar{
         width: 100%;
@@ -179,17 +195,33 @@
         padding: 20px;
       }
 
+      .hero{
+        padding: 30px 20px;
+      }
+
+      .hero img{
+        width: 180px;
+        height: 180px;
+      }
+
       .hero h1{
-        font-size: 30px;
+        font-size: 32px;
+      }
+
+      .card{
+        padding: 25px;
       }
     }
+
   </style>
 </head>
 
 <body>
 
-  <!-- LEFT MENU -->
+  <!-- SIDEBAR -->
+
   <div class="sidebar">
+
     <h2>Portfolio</h2>
 
     <button onclick="openTab('about')">About</button>
@@ -201,30 +233,33 @@
     <button onclick="openTab('achievements')">Achievements</button>
     <button onclick="openTab('certifications')">Certifications</button>
     <button onclick="openTab('contact')">Contact</button>
+
   </div>
 
-  <!-- MAIN -->
+  <!-- MAIN CONTENT -->
+
   <div class="main">
 
-    <!-- HERO -->
+    <!-- HERO SECTION -->
+
     <div class="hero">
-      <img src="profile.jpg" alt="Sai Anirudh">
+
+      <!-- YOUR PHOTO -->
+      <img src="Media.jpeg" alt="Sai Anirudh Godavarthi">
 
       <h1>Sai Anirudh Godavarthi</h1>
 
       <p>
-        Software Tester • Embedded Systems Engineer <br>
-        Masters in Electrical and Computer Engineering
+        Software Tester • Masters in Electrical and Computer Engineering
       </p>
 
       <p>
-        Embedded Systems • IoT • Automation Testing • VLSI •
-        ASIC Physical Design • RF & Mixed Signal • THz in 6G
+        Embedded Systems • IoT • Automation Testing •
+        VLSI • ASIC Physical Design • RF & Mixed Signal • THz in 6G
       </p>
 
       <div class="hero-buttons">
 
-        <!-- FIXED EMAIL BUTTON -->
         <a class="email-btn"
            href="mailto:sainairudh2000g@gmail.com?subject=Portfolio%20Contact">
            📧 Email Me
@@ -237,10 +272,13 @@
         </a>
 
       </div>
+
     </div>
 
     <!-- ABOUT -->
+
     <div class="card active" id="about">
+
       <h2>About Me</h2>
 
       <p>
@@ -248,10 +286,13 @@
         Embedded C, STM32, IoT firmware development,
         automation testing, and web technologies.
       </p>
+
     </div>
 
     <!-- SKILLS -->
+
     <div class="card" id="skills">
+
       <h2>Skills</h2>
 
       <ul>
@@ -264,10 +305,13 @@
         <li>RF & Mixed Signal Systems</li>
         <li>THz Communication for 6G</li>
       </ul>
+
     </div>
 
     <!-- PROJECTS -->
+
     <div class="card" id="projects">
+
       <h2>Projects</h2>
 
       <ul>
@@ -276,64 +320,55 @@
         <li>Embedded Firmware for Sensor Networks</li>
         <li>THz Communication Research for 6G</li>
       </ul>
+
     </div>
 
     <!-- PRESENTATIONS -->
+
     <div class="card" id="presentations">
       <h2>Presentations</h2>
-
-      <ul>
-        <li>IoT in Smart Cities</li>
-        <li>VLSI Design Flow</li>
-        <li>THz in 6G Networks</li>
-      </ul>
     </div>
 
     <!-- DOCUMENTS -->
     <div class="card" id="documents">
       <h2>Documents</h2>
-
-      <ul>
-        <li>Resume</li>
-        <li>Research Papers</li>
-        <li>Project Documentation</li>
-      </ul>
     </div>
 
     <!-- EDUCATION -->
     <div class="card" id="education">
       <h2>Education</h2>
-
       <ul>
         <li>Masters in Electrical & Computer Engineering</li>
-        <li>Bachelor’s in Electronics Engineering</li>
+        <li>Bachelor’s in Electrical & Electronics Engineering</li>
       </ul>
     </div>
 
     <!-- ACHIEVEMENTS -->
     <div class="card" id="achievements">
       <h2>Achievements</h2>
-
       <ul>
-        <li>Best Embedded Systems Project Award – 2025</li>
-        <li>Published Research Paper on IoT Security</li>
+        <li>Rising Star Award By CEO of QualiZeal</li>
+        <li>Dean's International Scholarship Award</li>
+        <li>Scoutt & Guides Award</li>
       </ul>
+
     </div>
 
     <!-- CERTIFICATIONS -->
+
     <div class="card" id="certifications">
       <h2>Certifications</h2>
-
       <ul>
-        <li>Advanced VLSI Design</li>
-        <li>Selenium Automation Testing</li>
+        <li>Microcontroller Embedded C Programming for Absolute Beginners - Udemy</li>
+        <li>Selenium Automation Testing - BrowserStack</li>
       </ul>
+
     </div>
 
     <!-- CONTACT -->
+
     <div class="card" id="contact">
       <h2>Contact</h2>
-
       <p>Email: sainairudh2000g@gmail.com</p>
       <p>GitHub: github.com/saianirudh-g</p>
     </div>
@@ -344,7 +379,8 @@
 
   </div>
 
-  <!-- SCRIPT -->
+  <!-- JAVASCRIPT -->
+
   <script>
 
     function openTab(tabId){
