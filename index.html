@@ -18,7 +18,7 @@
 
     .container {
       width: 90%;
-      max-width: 1000px;
+      max-width: 1100px;
       margin-top: 40px;
     }
 
@@ -35,11 +35,12 @@
     }
 
     .header img {
-      width: 150px;
-      height: 150px;
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
       object-fit: cover;
       box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      margin-bottom: 15px;
     }
 
     .typing {
@@ -62,9 +63,11 @@
       50% { border-color: transparent; }
     }
 
-    nav {
-      display: flex;
-      justify-content: space-around;
+    /* Dashboard Tabs */
+    .dashboard {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
       background: #fff;
       padding: 15px;
       border-radius: 12px;
@@ -72,7 +75,7 @@
       margin-bottom: 25px;
     }
 
-    nav button {
+    .dashboard button {
       background: none;
       border: none;
       font-size: 16px;
@@ -84,8 +87,8 @@
       transition: 0.3s;
     }
 
-    nav button:hover,
-    nav button.active {
+    .dashboard button:hover,
+    .dashboard button.active {
       background: #0078ff;
       color: white;
     }
@@ -142,6 +145,17 @@
       padding: 20px;
       color: #666;
     }
+
+    .links a {
+      color: #0078ff;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 10px;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 
@@ -150,19 +164,30 @@
 <div class="container">
 
   <div class="card header">
-    <img src="profile.jpg">
+    <img src="profile.jpg" alt="Sai Anirudh Photo">
     <h1 class="typing">I’m Sai Anirudh Godavarthi</h1>
     <p>Software Tester • Masters in Electrical and Computer Engineering</p>
     <p>Embedded Systems • IoT • Automation Testing • VLSI • ASIC Physical Design • RF & Mixed Signal • THz in 6G</p>
+    <div class="links">
+      <a href="mailto:sainairudh2000g@gmail.com">📧 Email Me</a>
+      <a href="https://github.com/saianirudh-1268" target="_blank">💻 GitHub Profile</a>
+    </div>
   </div>
 
-  <nav>
+  <!-- Dashboard Tabs (3-line layout) -->
+  <div class="dashboard">
     <button class="tab-btn active" onclick="openTab('about')">About</button>
     <button class="tab-btn" onclick="openTab('skills')">Skills</button>
     <button class="tab-btn" onclick="openTab('projects')">Projects</button>
+    <button class="tab-btn" onclick="openTab('presentations')">Presentations</button>
+    <button class="tab-btn" onclick="openTab('documents')">Documents</button>
     <button class="tab-btn" onclick="openTab('contact')">Contact</button>
-  </nav>
+    <button class="tab-btn" onclick="openTab('achievements')">Achievements</button>
+    <button class="tab-btn" onclick="openTab('education')">Education</button>
+    <button class="tab-btn" onclick="openTab('certifications')">Certifications</button>
+  </div>
 
+  <!-- ABOUT -->
   <div class="card tab-content active" id="about">
     <h3>About Me</h3>
     <p>
@@ -172,6 +197,7 @@
     </p>
   </div>
 
+  <!-- SKILLS -->
   <div class="card tab-content" id="skills">
     <h3>Skills</h3>
     <ul>
@@ -184,6 +210,7 @@
     </ul>
   </div>
 
+  <!-- PROJECTS -->
   <div class="card tab-content" id="projects">
     <h3>Projects</h3>
     <div class="projects-grid">
@@ -202,30 +229,31 @@
     </div>
   </div>
 
-  <div class="card tab-content" id="contact">
-    <h3>Contact Me</h3>
-    <form class="contact-form" action="mailto:sainairudh2000g@gmail.com" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+  <!-- PRESENTATIONS -->
+  <div class="card tab-content" id="presentations">
+    <h3>Presentations</h3>
+    <ul>
+      <li><a href="#">IoT in Smart Cities (PDF)</a></li>
+      <li><a href="#">VLSI Design Flow Overview</a></li>
+      <li><a href="#">THz Communication in 6G Networks</a></li>
+    </ul>
   </div>
 
-  <footer>
-    © 2026 Sai Anirudh — All Rights Reserved
-  </footer>
+  <!-- DOCUMENTS -->
+  <div class="card tab-content" id="documents">
+    <h3>Documents</h3>
+    <ul>
+      <li><a href="#">Resume (PDF)</a></li>
+      <li><a href="#">Research Paper</a></li>
+      <li><a href="#">Project Documentation</a></li>
+    </ul>
+  </div>
 
-</div>
-
-<script>
-  function openTab(tabId) {
-    document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
-    document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-    document.getElementById(tabId).classList.add('active');
-    event.target.classList.add('active');
-  }
-</script>
-
-</body>
-</html>
+  <!-- ACHIEVEMENTS -->
+  <div class="card tab-content" id="achievements">
+    <h3>Achievements</h3>
+    <ul>
+      <li>Best Embedded Systems Project Award – 2025</li>
+      <li>Published paper on IoT Security in IEEE Journal</li>
+      <li>Completed Advanced VLSI Design Certification</li>
+    </ul>
