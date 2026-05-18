@@ -2,103 +2,136 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Godavarthi Sai Anirudh | Portfolio</title>
+  <title>Sai Anirudh Godavarthi| Portfolio</title>
+
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f4f4f4;
-      color: #333;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #e9eef3;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
     }
-    header {
-      background: #222;
-      color: white;
-      padding: 40px;
+
+    .container {
+      width: 90%;
+      max-width: 900px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      margin-bottom: 25px;
+    }
+
+    .header {
       text-align: center;
     }
+
+    .header h1 {
+      margin: 0;
+      font-size: 40px;
+      color: #222;
+    }
+
+    .header h2 {
+      margin-top: 10px;
+      font-weight: normal;
+      color: #555;
+    }
+
     nav {
-      background: #444;
-      padding: 10px;
       text-align: center;
+      margin: 20px 0;
     }
+
     nav a {
-      color: white;
-      margin: 0 15px;
       text-decoration: none;
+      margin: 0 15px;
+      color: #0078ff;
       font-weight: bold;
     }
-    section {
-      padding: 40px;
-      max-width: 900px;
-      margin: auto;
-      background: white;
-      margin-top: 20px;
-      border-radius: 8px;
+
+    h3 {
+      color: #333;
+      margin-bottom: 10px;
     }
+
+    ul {
+      padding-left: 20px;
+    }
+
     footer {
       text-align: center;
       padding: 20px;
-      background: #222;
-      color: white;
-      margin-top: 20px;
+      color: #666;
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Welcome!!</h1>
-  <h2>I’m Sai Anirudh Godavarthi</h2>
-  <p>Software Tester | Masters in Electrical and Computer Engineering</p>
-  <p>IoT | Embedded Systems | Automation Testing | VLSI | ASIC Physical Design | RF & Mixed Signal | THz in 6G </p>
-</header>
+<div class="container">
 
-<nav>
-  <a href="#about">About</a>
-  <a href="#skills">Skills</a>
-  <a href="#projects">Projects</a>
-  <a href="#contact">Contact</a>
-</nav>
+  <div class="card header">
+    <h1>Welcome!!</h1>
+    <h2>I’m Sai Anirudh Godavarthi</h2>
+    <p>Software Developer • Masters in Electrical and Computer Engineering</p>
+    <p>Embedded Systems • IoT • Automation Testing • VLSI • ASIC Physical Design • RF & Mixed Signal • THz in 6G</p>
+  </div>
 
-<section id="about">
-  <h2>About Me</h2>
-  <p>
-    I am an enthusiastic engineer with experience in Embedded C, STM32, IoT firmware,
-    and automation testing using Selenium, Java, and Python. I love building things
-    that solve real-world problems.
-  </p>
-</section>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-<section id="skills">
-  <h2>Skills</h2>
-  <ul>
-    <li>Embedded C, STM32, ARM Cortex-M</li>
-    <li>IoT Firmware Development</li>
-    <li>Automation Testing (Selenium, Java, Python)</li>
-    <li>Web Development (HTML, CSS, JS)</li>
-  </ul>
-</section>
+  <div class="card" id="about">
+    <h3>About Me</h3>
+    <p>
+      I am an enthusiastic engineer with experience in Embedded C, STM32, IoT firmware,
+      and automation testing using Selenium, Java, and Python. I enjoy building
+      real-world solutions and exploring hardware–software integration.
+    </p>
+  </div>
 
-<section id="projects">
-  <h2>Projects</h2>
-  <ul>
-    <li><strong>IoT Smart Home System</strong> – Built using STM32 + sensors</li>
-    <li><strong>Automation Test Suite</strong> – Selenium-based testing framework</li>
-    <li><strong>Personal Portfolio Website</strong> – Hosted on GitHub Pages</li>
-  </ul>
-</section>
+  <div class="card" id="skills">
+    <h3>Skills</h3>
+    <ul>
+      <li>Embedded C, STM32, ARM Cortex‑M</li>
+      <li>IoT Firmware Development</li>
+      <li>Automation Testing (Selenium, Java, Python)</li>
+      <li>Web Development (HTML, CSS, JS)</li>
+    </ul>
+  </div>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: <strong>saianirudh2000gl@gmail.com</strong></p>
-  <p>GitHub: <a href="https://github.com/saianirudh-1268">github.com/saianirudh-1268</a></p>
-</section>
+  <div class="card" id="projects">
+    <h3>Projects</h3>
+    <ul>
+      <li><strong>IoT Smart Home System</strong> – Built using STM32 + sensors</li>
+      <li><strong>Automation Test Suite</strong> – Selenium-based testing framework</li>
+      <li><strong>Personal Portfolio Website</strong> – Hosted on GitHub Pages</li>
+    </ul>
+  </div>
 
-<footer>
-  © 2026 Sai Anirudh — All Rights Reserved
-</footer>
+  <div class="card" id="contact">
+    <h3>Contact</h3>
+    <p>Email: <strong>sainairudh2000g@gmail.com</strong></p>
+    <p>GitHub: <a href="https://github.com/saianirudh-1268">github.com/saianirudh-1268</a></p>
+  </div>
+
+  <footer>
+    © 2026 Sai Anirudh — All Rights Reserved
+  </footer>
+
+</div>
 
 </body>
 </html>
