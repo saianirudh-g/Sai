@@ -233,7 +233,7 @@
   <body>
    <!-- SIDEBAR -->
 <div class="sidebar">
-  <button class="menu-toggle" onclick="toggleMenu()">|☰|</button>
+  <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
 
   <div class="menu-items" id="menuItems">
     <button onclick="openTab('about')">About</button>
@@ -249,39 +249,99 @@
 </div>
     <!-- MAIN CONTENT --> 
     <div class="main">
-      <!-- PROFILE PHOTO --> 
-      <div class="profile-card"> 
-        <img src="Images/profile.jpeg" alt="Sai Anirudh" class="profile-photo">
-        <style> 
-          .profile-photo
-          {
-            width: 120px; 
-            /* reduced size */ 
-            height: 120px;
-            /* reduced size */ 
-            border-radius: 50%; 
-            object-fit: cover; 
-            border: 4px solid #0078ff; 
-            margin-bottom: 15px; 
-          }
-        </style>
-        <!-- HERO SECTION -->
-        <div class="hero">
-          <h1 class="typing">Sai Anirudh Godavarthi</h1>
-          <h2 class="typing" color="orange"> Welcome to my website !!</h2>
-          <p> Software Tester • Masters in Electrical and Computer Engineering </p> 
-          <p> Embedded Systems • IoT • Automation Testing • VLSI • ASIC Physical Design • RF & Mixed Signal • THz in 6G </p>
-          <div class="hero-buttons">
-            <a class="github-btn" href="https://github.com/saianirudh-g" target="_blank"> GitHub </a> 
-            <a class="linkedin-btn" href="https://www.linkedin.com/in/sai-anirudh-godavarthi-710b16273/"> LinkedIn </a> 
-          </div> 
-        </div>
-      </div> 
-      <!-- ABOUT --> 
-      <div class="card active" id="about">
-        <h2>About Me</h2>
-        <p> I am an enthusiastic engineer with experience in Embedded C, STM32, IoT firmware development, automation testing, and web technologies. </p> 
-      </div>
+      
+      <!-- ABOUT -->
+<div class="card active" id="about">
+
+  <!-- PROFILE PHOTO -->
+  <div style="text-align:center; margin-bottom:25px;">
+
+    <img src="Images/profile.jpeg"
+         alt="Sai Anirudh"
+         class="profile-photo">
+
+    <style>
+      .profile-photo
+      {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 5px solid #2563eb;
+        box-shadow: 0 8px 20px rgba(37,99,235,0.25);
+        margin-bottom: 20px;
+      }
+    </style>
+
+    <h1 style="
+      color:#2563eb;
+      font-size:40px;
+      margin-bottom:10px;">
+      Sai Anirudh Godavarthi
+    </h1>
+
+    <h2 style="
+      color:#f97316;
+      margin-bottom:15px;">
+      Welcome to my website !!
+    </h2>
+
+    <p style="
+      font-size:18px;
+      color:#475569;
+      line-height:1.8;
+      max-width:900px;
+      margin:auto;">
+      Software Tester • Masters in Electrical and Computer Engineering
+      <br><br>
+      Embedded Systems • IoT • Automation Testing • VLSI • ASIC Physical Design • RF & Mixed Signal • THz in 6G
+    </p>
+
+    <!-- BUTTONS -->
+    <div style="margin-top:30px;">
+
+      <a href="https://github.com/saianirudh-g"
+         target="_blank"
+         style="
+         display:inline-block;
+         padding:12px 24px;
+         margin:10px;
+         border:2px solid #2563eb;
+         border-radius:10px;
+         text-decoration:none;
+         color:#2563eb;
+         font-weight:bold;
+         transition:0.3s;">
+         GitHub
+      </a>
+
+      <a href="https://www.linkedin.com/in/sai-anirudh-godavarthi-710b16273/"
+         target="_blank"
+         style="
+         display:inline-block;
+         padding:12px 24px;
+         margin:10px;
+         background:#2563eb;
+         border-radius:10px;
+         text-decoration:none;
+         color:white;
+         font-weight:bold;
+         transition:0.3s;">
+         LinkedIn
+      </a>
+
+    </div>
+  </div>
+
+  <h2>About Me</h2>
+
+  <p>
+    I am an enthusiastic engineer with experience in Embedded C,
+    STM32, IoT firmware development, automation testing,
+    and web technologies.
+  </p>
+
+</div>
       <!-- SKILLS -->
       <div class="card" id="skills">
         <h2>Skills</h2>
