@@ -438,7 +438,7 @@ padding-top:70px;
 
 }
 /* SLIDEBAR */
-.sidebar{
+/* .sidebar{
 
 position:fixed;
 
@@ -449,6 +449,21 @@ width:280px;
 height:100%;
 
 transition:.4s;
+} */
+.sidebar h2{
+
+text-align:center;
+
+margin-bottom:30px;
+
+font-size:26px;
+
+font-weight:700;
+
+color:#2563eb;
+
+letter-spacing:1px;
+
 }
 
 .sidebar.active{
@@ -494,36 +509,71 @@ margin-left:280px;
 }
 
 
-/* BIGGER MENU TABS */
+/* ATTRACTIVE MENU TABS */
 
 .sidebar button{
 
-width:100%;
+width:90%;
 
-padding:22px 25px;
+margin:10px auto;
+
+padding:18px 25px;
+
+display:block;
 
 border:none;
 
-background:transparent;
+border-radius:15px;
 
-font-size:20px;
+background:linear-gradient(
+135deg,
+#ffffff,
+#f1f5f9
+);
+
+font-size:18px;
 
 font-weight:600;
+
+color:#334155;
 
 cursor:pointer;
 
 text-align:left;
 
-transition:.3s;
+transition:all .3s ease;
+
+box-shadow:
+0 4px 12px rgba(0,0,0,.08);
 
 }
 
 
+/* HOVER EFFECT */
+
 .sidebar button:hover{
 
-background:#2563eb;
+transform:translateX(10px);
+
+background:linear-gradient(
+135deg,
+#2563eb,
+#3b82f6
+);
 
 color:white;
+
+box-shadow:
+0 8px 20px rgba(37,99,235,.3);
+
+}
+
+
+/* CLICK EFFECT */
+
+.sidebar button:active{
+
+transform:scale(.96);
 
 }
 /* MAIN CONTENT */
