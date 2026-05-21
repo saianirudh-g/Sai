@@ -351,45 +351,26 @@ content="Sai Anirudh Godavarthi">
     }
     
 /* TOP BUTTON AREA */
-
 .top-buttons{
-
-position:fixed;
-
-top:8px;
-left:8px;
-
-display:flex;
-
-align-items:center;
-
-gap:12px;
-
-z-index:99999;
-
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  gap: 12px;
+  z-index: 99999;
 }
 /* SMALL MENU BUTTON */
-
 .menu-btn{
-
 width:38px;
 height:38px;
-
 display:flex;
-
 align-items:center;
 justify-content:center;
-
 font-size:22px;
-
 background:white;
-
 border-radius:8px;
-
 cursor:pointer;
-
 box-shadow:0 4px 10px rgba(0,0,0,.15);
-
 }
 /* ABOUT TAB */
 
@@ -437,46 +418,29 @@ transform:translateY(-2px);
 padding-top:70px;
 
 }
-/* SLIDEBAR */
+    
+/* SIDEBAR */
 .sidebar{
-
-position:fixed;
-
-top:0;
-left:-280px;
-
-width:280px;
-height:100%;
-
-transition:.4s;
-}
-.sidebar{
+  position: fixed;
+  top: 0;
+  left: -280px;
+  width: 280px;
+  height: 100%;
   background: white;
-  z-index: 1000;
-  box-shadow: 4px 0 20px rgba(0,0,0,0.1);
-}
-.sidebar h2{
-
-text-align:center;
-
-margin-bottom:30px;
-
-font-size:26px;
-
-font-weight:700;
-
-color:#2563eb;
-
-letter-spacing:1px;
-
+  z-index: 9999;
+  padding-top: 70px; /* 👈 IMPORTANT: pushes tabs below top buttons area */
+  transition: 0.4s;
 }
 
+/* when active */
 .sidebar.active{
-
-left:0;
-
+  left: 0;
 }
 
+/* ensure sidebar buttons don't collide visually */
+.sidebar button{
+  margin-top: 10px;
+}
 .main{
 
 transition:.4s;
@@ -782,13 +746,12 @@ padding:80px 40px 40px 40px;
 
 <body>
 
-  <!-- SIDEBAR -->
-  <div class="sidebar" id="sidebar">
     <div class="top-buttons">
     <button class="menu-btn" onclick="toggleMenu()"> ☰ </button>
     <button class="about-tab" onclick="openTab('about')"> Home </button>
     </div>
-
+  <!-- SIDEBAR -->
+  <div class="sidebar" id="sidebar">
       <button onclick="openTab('resume')">Resume</button>
       <button onclick="openTab('projects')">Projects</button>
       <button onclick="openTab('presentations')">Presentations</button>
