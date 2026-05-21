@@ -350,75 +350,123 @@ content="Sai Anirudh Godavarthi">
       display: flex;
     }
 
-    /* SIDEBAR */
+   /* MENU BUTTON */
 
-    .sidebar {
-      width: 250px;
-      background: white;
-      position: fixed;
-      height: 100%;
-      left: 0;
-      top: 0;
-      border-right: 1px solid #dbe4ee;
-      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
-      padding: 20px;
-      z-index: 1000;
-    }
+.menu-btn{
 
-    /* MENU BUTTON */
+position:fixed;
 
-    .menu-toggle {
-      width: 100%;
-      padding: 15px;
-      background: #2563eb;
-      color: white;
-      border: none;
-      border-radius: 10px;
-      font-size: 18px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: 0.3s;
-    }
+top:20px;
+left:20px;
 
-    .menu-toggle:hover {
-      background: #1d4ed8;
-    }
+width:50px;
+height:50px;
 
-    /* MENU ITEMS */
+display:flex;
+align-items:center;
+justify-content:center;
 
-    .menu-items {
-      display: none;
-      margin-top: 20px;
-    }
+font-size:30px;
 
-    .menu-items button {
-      width: 100%;
-      padding: 14px 20px;
-      margin-bottom: 10px;
-      background: #f4f7fb;
-      border: none;
-      border-radius: 10px;
-      color: #334155;
-      text-align: left;
-      font-size: 16px;
-      cursor: pointer;
-      transition: 0.3s;
-      font-weight: 500;
-    }
+background:white;
 
-    .menu-items button:hover {
-      background: #2563eb;
-      color: white;
-    }
+border-radius:10px;
 
-    /* MAIN CONTENT */
+cursor:pointer;
 
-    .main {
-      margin-left: 250px;
-      width: calc(100% - 250px);
-      padding: 40px;
-    }
-   
+z-index:9999;
+
+box-shadow:0 4px 10px rgba(0,0,0,.2);
+
+}
+
+
+/* SIDEBAR */
+
+.sidebar{
+
+position:fixed;
+
+top:0;
+
+left:-260px;
+
+width:250px;
+
+height:100%;
+
+background:white;
+
+padding-top:80px;
+
+border-right:1px solid #ddd;
+
+box-shadow:2px 0 15px rgba(0,0,0,.1);
+
+transition:0.4s;
+
+z-index:9998;
+
+}
+
+
+.sidebar.active{
+
+left:0;
+
+}
+
+
+.sidebar h2{
+
+text-align:center;
+
+margin-bottom:25px;
+
+color:#2563eb;
+
+}
+
+
+.sidebar button{
+
+width:100%;
+
+padding:15px;
+
+border:none;
+
+background:transparent;
+
+text-align:left;
+
+font-size:16px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+
+.sidebar button:hover{
+
+background:#2563eb;
+
+color:white;
+
+}
+
+
+/* MAIN CONTENT */
+
+.main{
+
+width:100%;
+
+padding:90px 40px;
+
+}   
     /* HERO */
 
     .hero {
@@ -616,11 +664,11 @@ content="Sai Anirudh Godavarthi">
 
   <div class="sidebar">
 
-    <button class="menu-toggle" onclick="toggleMenu()">
-      ☰ Menu
+    <button class="menu-btn" onclick="toggleMenu()">
+      ☰
     </button>
 
-    <div class="menu-items" id="menuItems">
+    <div class="sidebar" id="sidebar">
 
       <button onclick="openTab('about')">About</button>
       <button onclick="openTab('resume')">Resume</button>
@@ -1080,38 +1128,32 @@ content="Sai Anirudh Godavarthi">
   <!-- JAVASCRIPT -->
 
   <script>
+    function toggleMenu(){
 
-    function openTab(tabId)
-    {
-      const cards = document.querySelectorAll('.card');
+document
+.getElementById("sidebar")
+.classList.toggle("active");
 
-      cards.forEach(card =>
-      {
-        card.classList.remove('active');
-      });
+}
 
-      document
-        .getElementById(tabId)
-        .classList.add('active');
-    }
 
-    function toggleMenu()
-    {
-      const menu = document.getElementById("menuItems");
+function openTab(tabId){
 
-      menu.style.display =
-        menu.style.display === "block"
-        ? "none"
-        : "block";
-    }
+const cards=
+document.querySelectorAll(".card");
 
-    window.onload = function ()
-    {
-      document
-        .getElementById("menuItems")
-        .style.display = "none";
-    };
-/* TYPING ANIMATION */
+cards.forEach(card=>{
+
+card.classList.remove("active");
+
+});
+
+document
+.getElementById(tabId)
+.classList.add("active");
+
+}
+  /* TYPING ANIMATION */
 
 const texts =
 [
