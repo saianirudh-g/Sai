@@ -450,6 +450,11 @@ height:100%;
 
 transition:.4s;
 }
+.sidebar{
+  background: white;
+  z-index: 1000;
+  box-shadow: 4px 0 20px rgba(0,0,0,0.1);
+}
 .sidebar h2{
 
 text-align:center;
@@ -464,13 +469,13 @@ color:#2563eb;
 
 letter-spacing:1px;
 
-/* }
+}
 
 .sidebar.active{
 
 left:0;
 
-} */
+}
 
 .main{
 
@@ -781,10 +786,8 @@ padding:80px 40px 40px 40px;
   <div class="sidebar" id="sidebar">
     <div class="top-buttons">
     <button class="menu-btn" onclick="toggleMenu()"> ☰ </button>
-      <!-- ABOUT BUTTON -->
     <button class="about-tab" onclick="openTab('about')"> Home </button>
     </div>
-    <div class="sidebar" id="sidebar">
 
       <button onclick="openTab('resume')">Resume</button>
       <button onclick="openTab('projects')">Projects</button>
