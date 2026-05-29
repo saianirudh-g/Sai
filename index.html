@@ -326,7 +326,58 @@ nav{
   backdrop-filter:blur(15px);
   border-radius:25px;
 }
+.cards-page{
+    display:none;
 
+    grid-template-columns:
+    repeat(auto-fit,minmax(300px,1fr));
+
+    gap:25px;
+
+    margin-top:30px;
+}
+
+.cards-page.active-page{
+    display:grid;
+}
+
+.pagination-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    margin-top:35px;
+}
+
+.pagination-buttons button{
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    font-size:24px;
+
+    background:#06b6d4;
+
+    color:white;
+
+    transition:.3s;
+}
+
+.pagination-buttons button:hover{
+
+    transform:scale(1.1);
+
+}
 /* =========================================================
    SECTION
 ========================================================= */
@@ -649,110 +700,7 @@ validation and software quality engineering.
 </div>
 
 </section>
-
-<!-- PROJECTS -->
-
-<section id="projects">
-
-<h2 class="section-title">
-Featured <span>Projects</span>
-</h2>
-
-<div class="projects-grid">
-
-<div class="project-card glass">
-
-<div class="project-content">
-
-<h3>BLE Receiver Front End Design</h3>
-
-<p>
-Schematic and PCB design for Bluetooth Low Energy receiver systems.
-</p>
-
-<div class="tags">
-<span>RF</span>
-<span>PCB</span>
-<span>KiCad</span>
-</div>
-
-<div style="margin-top:25px;">
-
-<a href="https://github.com/saianirudh-g/Bluetooth-Low-Energy-Receiver-Front-End-Design-Schematic-PCB-Design-"
-target="_blank"
-class="btn btn-primary">
-View Project
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="project-card glass">
-
-<div class="project-content">
-
-<h3>RTL to GDSII Flow</h3>
-
-<p>
-ASIC Physical Design project including synthesis,floorplanning and routing.
-</p>
-
-<div class="tags">
-<span>ASIC</span>
-<span>VLSI</span>
-<span>Physical Design</span>
-</div>
-
-<div style="margin-top:25px;">
-
-<a href="https://github.com/saianirudh-g/RTL-to-GDSII-Flow"
-target="_blank"
-class="btn btn-primary">
-View Project
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="project-card glass">
-
-<div class="project-content">
-
-<h3>STM32 Embedded Systems</h3>
-
-<p>
-Embedded systems programming using STM32 microcontrollers and C language.
-</p>
-
-<div class="tags">
-<span>STM32</span>
-<span>Embedded C</span>
-<span>MCU</span>
-</div>
-
-<div style="margin-top:25px;">
-
-<a href="https://github.com/saianirudh-g/STM32-MCU-Using-Embedded-Tools"
-target="_blank"
-class="btn btn-primary">
-View Project
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
+   
 <!-- RESUME -->
 
 <section id="resume">
@@ -778,13 +726,13 @@ My <span>Resume</span>
 </tr>
 
 <tr>
-<td style="padding:12px;">Masters in Electrical & Computer Engineering</td>
+<td style="padding:12px;">Master of Science in Electrical & Computer Engineering</td>
 <td style="padding:12px;">UMKC</td>
 <td style="padding:12px;">2025-2027</td>
 </tr>
 
 <tr>
-<td style="padding:12px;">B.Tech EEE</td>
+<td style="padding:12px;">Bachelor of Technology in Electrical & Electronics Engineering</td>
 <td style="padding:12px;">Vishnu Institute of Technology</td>
 <td style="padding:12px;">2019-2023</td>
 </tr>
@@ -821,12 +769,138 @@ My <span>Resume</span>
 <td style="padding:12px;">2023</td>
 </tr>
 
+<tr>
+<td style="padding:12px;">Intern</td>
+<td style="padding:12px;">Isuzu Motors India Pvt Ltd</td>
+<td style="padding:12px;">2023</td>
+</tr>
 </table>
 
 </div>
 
 </div>
 
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<h2 class="section-title">Featured <span>Projects</span></h2>
+
+<div class="cards-page active-page">
+   
+   <div class="project-card glass">
+   <div class="project-content">
+      <h3>STM32 Microcontroller using Embedded Tools</h3>
+      <p>Embedded systems programming using STM32 microcontroller and CubeIDE.</p>
+
+<div class="tags">
+<span>STM32 MCU</span>
+<span>Embedded C</span>
+</div>
+
+<div style="margin-top:25px;">
+<a href="https://github.com/saianirudh-g/STM32-MCU-Using-Embedded-Tools"
+target="_blank"
+class="btn btn-primary">
+View Project
+</a>
+</div>
+</div>
+</div>
+
+   <div class="project-card glass">
+      <div class="project-content">
+         <h3>SRAM Project</h3>
+         <p>Schematic, Butterfly Curve Simulation, Layout Design using Cadence Virtuoso tool</p>
+
+<div class="tags">
+   <span>Cadence</span>
+   <span>Virtuoso</span>
+</div>
+
+<div style="margin-top:25px;">
+   <a href="https://github.com/saianirudh-g/SRAM-Project"> View Project </a>
+</div>
+</div>
+</div>
+   
+<div class="project-card glass">
+   <div class="project-content">
+      <h3>BLE Receiver Front End Design</h3>
+      <p>Schematic and PCB design for Bluetooth Low Energy receiver systems.</p>
+
+<div class="tags">
+<span>Schematic - QUCS</span>
+<span>PCB - KiCad</span>
+</div>
+
+<div style="margin-top:25px;">
+<a href="https://github.com/saianirudh-g/Bluetooth-Low-Energy-Receiver-Front-End-Design-Schematic-PCB-Design-"
+target="_blank"
+class="btn btn-primary">
+View Project
+</a>
+</div>
+</div>
+</div>
+
+<div class="project-card glass">
+   <div class="project-content">
+      <h3>RTL to GDSII Flow</h3>
+      <p>ASIC Physical Design project including synthesis,floorplanning and routing.</p>
+
+<div class="tags">
+<span>ASIC</span>
+<span>VLSI</span>
+</div>
+
+<div style="margin-top:25px;">
+<a href="https://github.com/saianirudh-g/RTL-to-GDSII-Flow" target="_blank" class="btn btn-primary"> View Project </a>
+</div>
+</div>
+</div>
+
+<div class="project-card glass">
+<div class="project-content">
+      <h3>Microwave Transmission Line Characterization Using a Handheld VNA</h3>
+      <p>50‑ohm coaxial transmission line behaves as a distortionless transmission line within the frequency range 1–5 GHz.</p>
+
+<div class="tags">
+<span>Vector Network Analyser</span>
+<span>Microstrip Antenna</span>
+</div>
+
+<div style="margin-top:25px;">
+<a href="https://github.com/saianirudh-g/Microwave-Transmission-Line-Characterization-Using-a-Handheld-VNA" target="_blank" class="btn btn-primary"> View Project </a>
+</div>
+</div>
+</div>
+
+<div class="project-card glass">
+<div class="project-content">
+      <h3>ESP32-Microcontroller-using-bluetooth-with-Embedded-C-tools</h3>
+      <p>Bluetooth communication using the ESP32 microcontroller, programmed in Embedded C.</p>
+
+<div class="tags">
+<span>ESP32 MCU</span>
+<span>Bluetooth/span>
+</div>
+
+<div style="margin-top:25px;">
+<a href="https://github.com/saianirudh-g/ESP32-Microcontroller-using-bluetooth-with-Embedded-C-tools"> View Project </a>
+</div>
+</div>
+</div>
+
+</div>
+   
+<div class="pagination-buttons">
+<button onclick="previousPage('projects')"> ❮ </button>
+<button onclick="nextPage('projects')"> ❯ </button>
 </div>
 
 </section>
@@ -841,7 +915,7 @@ My <span>Resume</span>
 Research <span>Presentations</span>
 </h2>
 
-<div class="projects-grid">
+<div class="cards-page active-page">
 
 <div class="project-card glass">
 
@@ -1212,9 +1286,11 @@ Call Me
 <!-- FOOTER -->
 
 <footer>
-
-© 2026 Sai Anirudh Godavarthi • Built with HTML CSS & JavaScript
-
+  FOLLOW:
+  <a href="https://github.com/saianirudh-g">  GITHUB  </a>
+  <a href="https://www.linkedin.com/in/sai-anirudh-godavarthi-710b16273/">  LINKEDIN  </a>
+  <a href="https://www.linkedin.com/feed/">  FEED  </a>
+  <p>© 2026 Sai Anirudh Godavarthi | Powered By GitHub</p>
 </footer>
 
 <!-- JAVASCRIPT -->
@@ -1247,7 +1323,58 @@ let i = 0;
 let j = 0;
 let currentWord = "";
 let isDeleting = false;
+const pageTracker = {};
 
+function nextPage(sectionId){
+
+    const section =
+    document.getElementById(sectionId);
+
+    const pages =
+    section.querySelectorAll('.cards-page');
+
+    if(!pageTracker[sectionId])
+        pageTracker[sectionId] = 0;
+
+    pages[
+      pageTracker[sectionId]
+    ].classList.remove('active-page');
+
+    pageTracker[sectionId]++;
+
+    if(pageTracker[sectionId] >= pages.length)
+        pageTracker[sectionId] = 0;
+
+    pages[
+      pageTracker[sectionId]
+    ].classList.add('active-page');
+}
+
+function previousPage(sectionId){
+
+    const section =
+    document.getElementById(sectionId);
+
+    const pages =
+    section.querySelectorAll('.cards-page');
+
+    if(!pageTracker[sectionId])
+        pageTracker[sectionId] = 0;
+
+    pages[
+      pageTracker[sectionId]
+    ].classList.remove('active-page');
+
+    pageTracker[sectionId]--;
+
+    if(pageTracker[sectionId] < 0)
+        pageTracker[sectionId] =
+        pages.length - 1;
+
+    pages[
+      pageTracker[sectionId]
+    ].classList.add('active-page');
+}
 function type(){
 
   currentWord = words[i];
