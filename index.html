@@ -136,13 +136,13 @@ nav{
   align-items:center;
 }
 .logo {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding-left: 20px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
-.logo svg {
-  height: 100px; /* adjust to fit your navbar */
+.logo img {
+  height: 60px;
+  width: auto;
 }
 .nav-links{
   display:flex;
@@ -514,34 +514,7 @@ footer {
 <header>
 <nav>
 <div class="logo">
-  <svg width="120" height="300" viewBox="0 0 120 300" fill="none">
-    <!-- central vertical line -->
-    <line x1="60" y1="20" x2="60" y2="280"
-          stroke="#06b6d4" stroke-width="3" stroke-linecap="round"/>
-
-    <!-- extended horizontal line from A to H -->
-    <line x1="20" y1="20" x2="100" y2="20"
-          stroke="#06b6d4" stroke-width="3" stroke-linecap="round"/>
-
-    <!-- letters stacked vertically -->
-    <text x="60" y="60" text-anchor="middle"
-          fill="#e0faff" font-size="28" font-family="Poppins, sans-serif" font-weight="800">A</text>
-    <text x="60" y="95" text-anchor="middle"
-          fill="#e0faff" font-size="28" font-family="Poppins, sans-serif" font-weight="800">N</text>
-    <text x="60" y="130" text-anchor="middle"
-          fill="#e0faff" font-size="28" font-family="Poppins, sans-serif" font-weight="800">I</text>
-    <text x="60" y="165" text-anchor="middle"
-          fill="#e0faff" font-size="28" font-family="Poppins, sans-serif" font-weight="800">R</text>
-    <text x="60" y="200" text-anchor="middle"
-          fill="#e0faff" font-size="28" font-family="Poppins, sans-serif" font-weight="800">U</text>
-    <text x="60" y="235" text-anchor="middle"
-          fill="#e0faff" font-size="28" font-family="Poppins, sans-serif" font-weight="800">D</text>
-    <text x="60" y="270" text-anchor="middle"
-          fill="#e0faff" font-size="28" font-family="Poppins, sans-serif" font-weight="800">H</text>
-
-    <!-- bottom circuit node -->
-    <circle cx="60" cy="280" r="5" fill="#06b6d4"/>
-  </svg>
+  <img src="images/logo.png" alt="Anirudh Logo">
 </div>
     
 <div class="nav-links" id="navLinks">
